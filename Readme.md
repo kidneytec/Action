@@ -2,6 +2,14 @@
 
 
 # 修改
+将`Control+Action.swift`、`UIBarButtonItem+Action.swift`、`UIRefreshControl+Action.swift`中的
+```
+.map { inputTransform(self.base) }
+```
+改成
+```
+.map { [unowned base] in inputTransform(base) }
+```
 
 
 Action
