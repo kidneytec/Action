@@ -34,7 +34,7 @@ public extension Reactive where Base: UIRefreshControl {
         unbindAction()
 
         self.controlEvent(.valueChanged)
-            .map { inputTransform(self.base)}
+            .map { [unowned base] in inputTransform(base) }
             .bind(to: action.inputs)
             .disposed(by: self.base.actionDisposeBag)
 
