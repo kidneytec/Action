@@ -1,6 +1,3 @@
-[![CircleCI](https://circleci.com/gh/RxSwiftCommunity/Action.svg?style=svg)](https://circleci.com/gh/RxSwiftCommunity/Action)
-
-
 # 修改
 将`Control+Action.swift`、`UIBarButtonItem+Action.swift`、`UIRefreshControl+Action.swift`中的
 ```
@@ -10,7 +7,10 @@
 ```
 .map { [unowned base] in inputTransform(base) }
 ```
+修复内存泄漏！！！
 
+
+[![CircleCI](https://circleci.com/gh/RxSwiftCommunity/Action.svg?style=svg)](https://circleci.com/gh/RxSwiftCommunity/Action)
 
 Action
 ======
